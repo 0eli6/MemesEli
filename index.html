@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de Memes</title>
+    <link rel="stylesheet" href="/styles.css" type="text/css" id="enlaceEstilos"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <h1> Memes</h1>
+    </header>
+
+    <section class="row container-fluid" id="todo">
+        <aside id="lateral" class="col-sm-3">
+            <select id="temas"> 
+                <option value="#" selected>Categoría...</option>
+                <option value="memesito">Random</option>
+                <option value="legate">Gatitos</option>
+                <option value="anime">Anime</option>
+            </select>
+        </aside>
+
+        <section id="principal" class="col-sm-9">
+            <article id="memesito" class="contenedor" style="display: none;">
+                <div class="plantilla_memes">
+                    <h2>Elige una plantilla:</h2>
+                    <div class="plantillas">
+                        <img src="img/perroGallo.png" alt="Plantilla 1" class="foto" onclick="selectTemplate('img/perroGallo.png')">
+                        <img src="img/poo.png" alt="Plantilla 2" class="foto" onclick="selectTemplate('img/poo.png')">
+                        <img src="img/logan.png" alt="Plantilla 3" class="foto" onclick="selectTemplate('img/logan.png')">
+                    </div>
+                </div>
+                
+                <h3>cambiar estilo </h3>
+                <form action="">
+                    <input type="radio" name="estilo" value="css/styles.css" checked  onclick="cambiarArchivo(this.value)">Por defecto<br>
+                    <input type="radio" name="estilo" value="css/estilo2.css" onclick="cambiarArchivo(this.value) " >estilo 1<br>
+                    <input type="radio" name="estilo" value="css/estilo3.css"  onclick="cambiarArchivo(this.value)">estilo 2<br>
+                </form>
+
+                <div class="card-form">
+                    <label for="cardText">Texto del meme:</label>
+                    <input type="text" id="cardText" placeholder="Escribe tu meme aquí..."><br>
+                    <label for="bordeTexto">Color de borde:</label>
+                    <input type="color" id="bordeTexto">
+                    <label for="colorTexto">Color de texto:</label>
+                    <input type="color" id="colorTexto">
+                    <br>
+                    <button onclick="carta()">Generar</button>
+                </div>
+                <div class="card-preview">
+                    <h2>Aca esta tu meme</h2>
+                    <div class="card" style="position: relative;"></div>
+                </div>
+            </article>
+
+            <article id="legate" class="contenedor" style="display: none;">
+                <div class="plantilla_memes">
+                    <h2>Elige una plantilla:</h2>
+                    <div class="plantillas">
+                        <img src="img/peguito.png" alt="Plantilla 1" class="foto" onclick="selectTemplate('img/peguito.png')">
+                        <img src="img/gatoo.png" alt="Plantilla 2" class="foto" onclick="selectTemplate('img/gatoo.png')">
+                        <img src="img/calculando.png" alt="Plantilla 3" class="foto" onclick="selectTemplate('img/calculando.png')">
+                    </div>
+                </div>
+
+                <h3>cambiar estilo </h3>
+                <form action="">
+                    <input type="radio" name="estilo" value="/css/styles.css" checked  onclick="cambiarArchivo(this.value)">Por defecto<br>
+                    <input type="radio" name="estilo" value="/css/estilo2.css" onclick="cambiarArchivo(this.value) " >estilo 1<br>
+                    <input type="radio" name="estilo" value="css/estilo3.css"  onclick="cambiarArchivo(this.value)">estilo 2<br>
+                </form>
+                
+                <div class="card-form">
+                    <label for="cardText">Texto del meme:</label>
+                    <input type="text" id="cardText" placeholder="Escribe tu meme aquí..."><br>
+                    <label for="bordeTexto">Color de borde:</label>
+                    <input type="color" id="bordeTexto">
+                    <label for="colorTexto">Color de texto:</label>
+                    <input type="color" id="colorTexto">
+                    <br>
+                    <button onclick="carta()">Generar</button>
+                </div>
+                <div class="card-preview">
+                    <h2>Aca esta tu meme</h2>
+                    <div class="card" style="position: relative;"></div>
+                </div>
+            </article>
+
+            <article id="anime" class="contenedor" style="display: none;">
+                <div class="plantilla_memes">
+                    <h2>Elige una plantilla:</h2>
+                    <div class="plantillas">
+                        <img src="img/uno.png" alt="Plantilla 1" class="foto" onclick="selectTemplate('img/uno.png')">
+                        <img src="img/anya.png" alt="Plantilla 2" class="foto" onclick="selectTemplate('img/anya.png')">
+                        <img src="img/baky.png" alt="Plantilla 3" class="foto" onclick="selectTemplate('img/baky.png')">
+                    </div>
+                </div>
+
+                <h3>cambiar estilo </h3>
+                <form action="">
+                    <input type="radio" name="estilo" value="/css/styles.css" checked  onclick="cambiarArchivo(this.value)">Por defecto<br>
+                    <input type="radio" name="estilo" value="/css/estilo2.css" onclick="cambiarArchivo(this.value) " >estilo 1<br>
+                    <input type="radio" name="estilo" value="css/estilo3.css"  onclick="cambiarArchivo(this.value)">estilo 2<br>
+                </form>
+        
+                <div class="card-form">
+                    <label for="cardText">Texto del meme:</label>
+                    <input type="text" id="cardText" placeholder="Escribe tu meme aquí..."><br>
+                    <label for="bordeTexto">Color de borde:</label>
+                    <input type="color" id="bordeTexto">
+                    <label for="colorTexto">Color de texto:</label>
+                    <input type="color" id="colorTexto">
+                    <br>
+                    <button onclick="carta()">Generar</button>
+                </div>
+        
+                <div class="card-preview">
+                    <h2>Aca esta tu meme</h2>
+                    <div class="card" style="position: relative;"></div>
+                </div>
+
+            </article>
+        </section>
+    </section>
+
+    <script src="/Js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+html{
+	font-size:16px;
+}
+
+#cartas{
+    height:500px;
+}
+
+header{
+	background-color:#7c0a8b;
+	text-align:center;
+}
+
+
+
+section{
+	background-color: #8400ff;
+	font-size:1.2rem;
+}
+
+#lateral{
+    background-color: #901371;
+    text-align:center;
+    padding: 50px 100px; 
+    
+}
+
+.contenedor {
+    width: 100%;
+    border: solid 1px #ffffff;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.plantillas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-preview {
+    height: 30%;
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.res{
+	width:99%;
+	line-height:25px;
+	border:solid 1px #FFE459;
+	padding:10px;
+	margin:10px auto;
+}
+
+.card{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+.foto{
+    margin: 10px auto; 
+    width: 300px;
+    border: 3px solid #008b66;
+    display:block;
+    background-color: #fff;
+}
+
+
+.plantillas img{
+    padding: 18px 18px;
+    display: inline-block;
+    display: flex;
+}   
+
+#principal select{
+    margin-left: 24rem;
+}
